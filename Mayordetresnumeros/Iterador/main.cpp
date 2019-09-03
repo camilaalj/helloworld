@@ -44,20 +44,32 @@ int main()
     else
         cout<< "No es un numero primo"<<endl;
     return 0;*/
-    /**3°*/
+    /**3°
     int a=2;int b =2;int c=0;
     while (a<100){
         while (a>b){
             if (a%b == 0)
                 c++;
             b++;
+        }
         if (c==0)
             cout<<a<<endl;
-        }
         a++;
         c=0;
-    }
+        b=2;
+    }*/
 
+    int a=2;int b =2;int c=0;
+    for (int b=2; a<100; a++){
+        for (int b=2; a > b; b++){
+            if (a%b == 0)
+                c++;
+        }
+    if (c==0)
+        cout<<a<<endl;
+    c=0;
+    b=2;
+    }
     /** 4°
 
     int a; int b = 1; int c = 0;
