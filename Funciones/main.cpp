@@ -65,61 +65,23 @@ if ((m>47)&& (m<58)){
 else {
     return false;
 }
+}*/
+bool EsLetra (char a){
+int g= static_cast<int>(a);
+if ())
 }
 
 
 int main()
 {
-   int n;
+   char n;
+   //int n;
    cin>>n;
 //   ImprimirDigitos(n);
 // cout<<ContarDigitos(n);
 // cout<< EsPalindromo(n);
 // cout<<CalcularFibo(n);
-cout<<EsNumero(n);
+// cout<<EsNumero(n);
 }
 
-    /**int a; int b=1; int c=0;
-    cout<<"Ingrese un numero"<<endl;
-    cin>>a;
-    while (a>=b){
-        b=b*10;
-        c++;
-    }
-    cout<<c<<endl;*/
-
-    /**int num;
-    cin>> num;
-    int aux1= num/10000;
-    int aux2= num%10;
-    if (aux1 == aux2){
-        num =num -(aux1*10000);
-        num-=aux2;
-        num/=10;
-        if ((num/100)==(num%10)){
-            cout<<"Es palindromo"<< "\n";
-        }
-    }*/
-
-    /**int x=0, y=1, aux;
-    int cont= 0, n;
-    cin>>n;
-    while (cont<n){
-        cout<<x<<'\t';
-        x=y;
-        aux=x+y;
-        y=aux;
-    }
-
-    char y;
-    cin>>y;
-    int x= static_cast<int>(y);
-    if ((x>=48)&&(x<=57)){
-        cout<<"Es un numero"<<"\n";
-    }
-    else
-        cout<<"No es un numero"<<"\n";
-
-    return 0;
-}*/
 
