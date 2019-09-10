@@ -18,6 +18,8 @@ using namespace std;
     f=a%10;
     cout<<f<<'\t';
 }
+
+
 int ContarDigitos(int a){
     int b=1; int c=0;
     while (a>=b){
@@ -26,6 +28,8 @@ int ContarDigitos(int a){
     }
     return c;
 }
+
+
 bool EsPalindromo(int num){
     int aux1= num/10000;
     int aux2= num%10;
@@ -39,6 +43,7 @@ bool EsPalindromo(int num){
             return false;
     }
 }
+
 
 int CalcularFibo(int p){
     int num1= 1;
@@ -55,7 +60,8 @@ int CalcularFibo(int p){
         k++;
     }
     return s;
-}*/
+}
+
 
 bool EsNumero(char a){
 int m= static_cast<int>(a);
@@ -65,10 +71,39 @@ if ((m>47)&& (m<58)){
 else {
     return false;
 }
-}*/
+}
+
+
 bool EsLetra (char a){
-int g= static_cast<int>(a);
-if ())
+int m= static_cast<int>(a);
+if ((m>96)&&(m<123)){
+    return true;
+}
+if ((m>64)&&(m<91)){
+    return true;
+}
+else
+    return false;
+}
+
+
+char ConvertirMayuscula(char a){
+int m= static_cast<int>(a);
+if ((m>96)&&(m<123)){
+    m=m-32;
+    char b=static_cast<int>(m);
+    return b;
+}
+}*/
+
+
+char ConvertirMinuscula(char a){
+int m= static_cast<int>(a);
+if ((m>64)&&(m<91)){
+    m=m+32;
+    char b=static_cast<char>(m);
+    return b;
+}
 }
 
 
@@ -82,6 +117,9 @@ int main()
 // cout<< EsPalindromo(n);
 // cout<<CalcularFibo(n);
 // cout<<EsNumero(n);
+// cout<<EsLetra(n);
+// cout<<ConvertirMayuscula(n);
+cout<<ConvertirMinuscula(n);
 }
 
 
