@@ -45,8 +45,11 @@ void Invertirre(int arr[],int tam){
     int i = 0;
     if (tam=2)
         Swap(arr[i],arr[tam]);
-    else
-        Swap(arr[i++],arr[tam--]);
+    else{
+        Swap(arr[i],arr[tam]);
+        i++;
+        tam--;
+    }
 }
 
 
