@@ -18,7 +18,7 @@ int Sumarit(int arr[],int tam){
 
 }
 
-int Sumarre(int arr[], int tam, int suma=0, int i=0){
+int Sumarre(int arr[], int tam){
     if (tam==1)
         return (arr[0]);
 
@@ -37,26 +37,70 @@ void Invertirit(int arr[],int tam){
     int q = tam/2;
     tam-=1;
     for (int i=0;i<q;i++){
-        Swap(arr[i],arr[tam]);
-
-        /**int e= arr[i];
-        arr[i]=arr[tam];
-        arr[tam--]=e;*/
+        Swap(arr[i],arr[tam--]);
     }
 }
 
-/**void Invertirre(int arr[],int tam){
-    if
-}*/
+void Invertirre(int arr[],int tam){
+    int i = 0;
+    if (tam=2)
+        Swap(arr[i],arr[tam]);
+    else
+        Swap(arr[i++],arr[tam--]);
+}
+
+
+void BubbleSort(int arr[], int tam){
+    for(int i=0;i<tam;i++){
+        for (int e=0; e<tam-1 ;e++){
+            if (arr[e]>arr[e+1]){
+                Swap(arr[e],arr[e+1]);
+            }
+        }
+    }
+}
+
+void InsertionSort(int arr[], int tam){
+    for(int i=0;i<tam;i++){
+        int val=arr[i];
+        int e=i;
+        while ((e>0)&&(arr[e-1]>val)){
+            Swap(arr[e],arr[e--]);
+        }
+        arr[e]=val;
+    }
+}
+
+void QuickSort(int arr[], int tam){
+    int f=tam-1;
+    int i=0;
+    int pivote=tam/2;
+    while (i<tam){
+        if ((arr[i]>arr[pivote])&&(arr[f]<arr[pivote])){
+            Swap(arr[i],arr[f]);
+            i++;
+            f--;
+        }
+        if (arr[i]<arr[pivote])
+            i++;
+        if (arr[f]>arr[pivote])
+            f--;
+    }
+
+}
 
 int main()
 {
- int x[5]={1,4,2,3,5};
- /**for (int i=0;i<5;i++){
+ int x[5]/**={1,2,3,4,5}*/;
+ for (int i=0;i<5;i++){
     cin>>x[i];
- }*/
- Imprimir(x,5);
+ }
  cout<<Sumarit(x,5)<<endl;
  cout<<Sumarre(x,5)<<endl;
- Invertirit(x,5);
+ //Invertirit(x,5);
+ Invertirre(x,5);
+ //InsertionSort(x,5);
+ //QuickSort(x,5);
+ //BubbleSort(x,5);
+ Imprimir(x,5);
 }
