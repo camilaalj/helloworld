@@ -73,8 +73,8 @@ void InsertionSort(int arr[], int tam){
 void QuickSort(int arr[], int tam){
     int f=tam-1;
     int i=0;
-    int pivote=tam/2;
-    while (i<tam){
+    int pivote=(tam/2)-1;
+    while ((i<pivote)&&(f>pivote)){
         if ((arr[i]>arr[pivote])&&(arr[f]<arr[pivote])){
             Swap(arr[i],arr[f]);
             i++;
@@ -97,9 +97,9 @@ int main()
  cout<<Sumarit(x,5)<<endl;
  cout<<Sumarre(x,5)<<endl;
  //Invertirit(x,5);
- Invertirre(x,5);
+ //Invertirre(x,5);
  //InsertionSort(x,5);
- //QuickSort(x,5);
+ QuickSort(x,5);
  //BubbleSort(x,5);
  Imprimir(x,5);
 }
