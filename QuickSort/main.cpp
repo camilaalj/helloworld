@@ -9,44 +9,35 @@ void Imprimir (int arr[],int tam){
 
 }
 
-void quickSort(int arr[], int tam){
-    int f=tam-1;
-    int i=0;
-    int pivote=tam/2;
-    while ((i<tam)&&(i<tam/2)){
-        /**if ((arr[i]>arr[pivote])&&(arr[f]<arr[pivote])){
-            swap(arr[i],arr[f]);
+void quickSort(int arr[], int pi, int pf){
+    int centro, i, j, pivote;
+    centro = (pi+pf)/2;
+    pivote = arr[centro];
+    i = pi;
+    j = pf;
+    while(i<=j){
+        while (arr[i] < pivote)
             i++;
-            f--;
-        }*/
-        if (arr[i]<arr[pivote]&&(arr[pivote]>arr[f])){
-            swap(arr[pivote],arr[f]);
-            f--;
-        }
-        if (arr[f]>arr[pivote]&&(arr[f]>arr[i]))
-            f--;
-        if ((arr[i]>arr[pivote])&&(arr[pivote]>arr[f])){
-            swap(arr[i],arr[f]);
+        while (arr[j] >pivote)
+            j--;
+        if (i<=j){
+            swap(arr[i],arr[j]);
             i++;
-            f--;
-        }
-        if ((arr[i]>arr[pivote])&&(arr[f]>arr[pivote])){
-            swap (arr[i],arr[pivote]);
-            i++;
-        }
-        if ((arr[i]<arr[pivote])&&(arr[f]>arr[pivote])){
-            swap (arr[f],arr[pivote]);
-            f--;
+            j--;
         }
     }
-
+    if (pi<j)
+        quickSort(arr,pi,j);
+    if (i<pf)
+        quickSort(arr,i,pf);
 }
+
 int main()
 {
     int x[5]/**={1,2,3,4,5}*/;
     for (int i=0;i<5;i++){
         cin>>x[i];
  }
-    quickSort(x,5);
+    quickSort(x,0,4);
     Imprimir(x,5);
 }

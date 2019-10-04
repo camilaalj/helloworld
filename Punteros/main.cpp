@@ -78,6 +78,29 @@ void InsertionSort(int *arr, int tam){
     }
 }
 
+void quickSort(int *arr, int pi, int pf){
+    int centro, i, j, pivote;
+    centro = (pi+pf)/2;
+    pivote = *(arr+centro);
+    i = pi;
+    j = pf;
+    while(i<=j){
+        while (*(arr+i) < pivote)
+            i++;
+        while (*(arr+j) > pivote)
+            j--;
+        if (i<=j){
+            Swap(*(arr+i),*(arr+j));
+            i++;
+            j--;
+        }
+    }
+    if (pi<j)
+        quickSort(arr,pi,j);
+    if (i<pf)
+        quickSort(arr,i,pf);
+}
+
 int main()
 {
     int x[5]={1,7,4,3,8};
@@ -86,6 +109,7 @@ int main()
     //invertirre(x,5);
     //BubbleSort(x,5);
     //InsertionSort(x,5);
+    quickSort(x,0,4);
     imprimir(x,5);
     cout<<sumait(x,5)<<endl;
     cout<<sumare(x,5)<<endl;
