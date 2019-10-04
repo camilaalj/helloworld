@@ -44,6 +44,7 @@ int main()
     else
         cout<< "No es un numero primo"<<endl;
     return 0;*/
+
     /**3°
     int a=2;int b =2;int c=0;
     while (a<100){
