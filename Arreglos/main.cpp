@@ -98,8 +98,8 @@ int main()
  cout<<Sumarre(x,5)<<endl;
  //Invertirit(x,5);
  //Invertirre(x,5);
- //InsertionSort(x,5);
- QuickSort(x,5);
+ InsertionSort(x,5);
+ //QuickSort(x,5);
  //BubbleSort(x,5);
  Imprimir(x,5);
 }

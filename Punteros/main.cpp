@@ -42,24 +42,50 @@ void Swap(int*ptr1, int*ptr2){
 
 void invertirit(int *arr, int tam){
     int q = tam/2;
-    for (*a)
-
+    tam-=1;
+    for (int i=0;i<q;i++){
+        Swap(*(arr+i),*(arr+tam));
+        tam--;
     }
 }
 
-void invertirre(int *arr, int tam){
-    if (tam<*arr)
+void invertirre(int *arr, int tam,int i=0){
+    if (tam<i)
         return;
-    swap(*arr,*(arr+tam-1));
-    invertirre (arr++,tam-1);
+    swap(*(arr+i),*(arr+tam-1));
+    invertirre (arr,tam-1,i+1);
+}
+
+void BubbleSort(int *arr, int tam){
+    for(int i=0;i<tam;i++){
+        for (int e=0; e<tam-1 ;e++){
+            if (*(arr+e)>*(arr+e+1)){
+                Swap(*(arr+e),*(arr+e+1));
+            }
+        }
+    }
+}
+
+void InsertionSort(int *arr, int tam){
+    for(int i=0;i<tam;i++){
+        int val=*(arr+i);
+        int e=i;
+        while ((e>0)&&(*(arr+e-1)>val)){
+            Swap(*(arr+e),*(arr+e-1));
+            e--;
+        }
+        *(arr+e)=val;
+    }
 }
 
 int main()
 {
-    int x[5]={1,2,3,4,5};
+    int x[5]={1,7,4,3,8};
     int tam=5;
-    invertirit(x,5);
-    invertirre(x,5);
+    //invertirit(x,5);
+    //invertirre(x,5);
+    //BubbleSort(x,5);
+    //InsertionSort(x,5);
     imprimir(x,5);
     cout<<sumait(x,5)<<endl;
     cout<<sumare(x,5)<<endl;
