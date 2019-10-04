@@ -10,6 +10,7 @@ int main()
     cin>> a;
     cin>> b;
     cin>> c;
+
     if (a>b)
         if (a>c)
             cout<< a << " Es el numero mayor"<<endl;
