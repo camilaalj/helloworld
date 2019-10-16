@@ -47,7 +47,7 @@ bool palindromo (char *cad){
     }
 }
 
-bool palindromore (char *cad){
+bool palindromore (char *cad,char *cade){
     int t=tama(cad)-1;
     int i=0;
     if (cad[i]!=cad[t])
@@ -61,9 +61,10 @@ bool palindromore (char *cad){
 int main()
 {
     char cadena[]="hola";
+    char *cad=tama(cadena)+cadena-1;
     cout << cadena << endl;
     invertir(cadena);
     cout << cadena << endl;
     cout << tamanore(cadena)<<endl;
-    cout<<palindromore(cadena)<<endl;
+    cout<<palindromore(cadena,cad)<<endl;
 }
