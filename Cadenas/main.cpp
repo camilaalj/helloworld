@@ -25,12 +25,12 @@ void invertir (char *cad){
     }
 }
 
-void invertire (char *cad){
-    int t =tama (cad) -1;
-    if (tama(cad)=='/0')
-        cout<<cad<<endl;
+void invertire (char *cad, char *cade){
+    if (cade<cad)
+        return;
     else{
-        swap (*cad++,cad[t--]);
+        swap (*cad,*cade);
+        return invertire(++cad, --cade);
     }
 }
 
@@ -48,12 +48,10 @@ bool palindromo (char *cad){
 }
 
 bool palindromore (char *cad,char *cade){
-    int t=tama(cad)-1;
-    int i=0;
-    if (cad[i]!=cad[t])
+    if (cad!=cade)
         return false;
     else
-        return palindromore;
+        return palindromore(++cad,--cade);
         return true;
 
 }
@@ -63,8 +61,8 @@ int main()
     char cadena[]="hola";
     char *cad=tama(cadena)+cadena-1;
     cout << cadena << endl;
-    invertir(cadena);
+    invertire(cadena,cad);
     cout << cadena << endl;
-    cout << tamanore(cadena)<<endl;
+    //cout << tamanore(cadena)<<endl;
     cout<<palindromore(cadena,cad)<<endl;
 }
