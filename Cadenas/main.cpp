@@ -48,12 +48,14 @@ bool palindromo (char *cad){
 }
 
 bool palindromore (char *cad,char *cade){
-    if (cad!=cade)
-        return false;
-    else
-        return palindromore(++cad,--cade);
+    if (cade<cad)
         return true;
-
+    else{
+        if (cad!=cade)
+            return false;
+        else
+            return true && palindromore(++cad,--cade);
+    }
 }
 
 int main()
