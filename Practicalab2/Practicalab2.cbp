@@ -34,8 +34,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Curso.h" />
 		<Unit filename="Estudiante.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Curso.cpp" />
 		<Unit filename="src/Estudiante.cpp" />
 		<Extensions>
 			<code_completion />
