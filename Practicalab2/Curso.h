@@ -2,13 +2,15 @@
 #define CURSO_H
 #include <iostream>
 #include<string>
+#include "Estudiante.h"
+using namespace std;
 
 class Curso
 {
     public:
         Curso();
         Curso(Curso&q);
-        Curso(string nombre,string codigo,Estudiante *alumnos,int cantidadalumnos);
+        Curso(string nombre,string codigo, Estudiante *alumnos,int cantidadalumnos);
         virtual ~Curso();
         string obtenernombre();
         string obtenercodigo();

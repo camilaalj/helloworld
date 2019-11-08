@@ -15,10 +15,10 @@ Curso::Curso(Curso&q)
 
 Curso::Curso(string nombre,string codigo,Estudiante *alumnos,int cantidadalumnos)
 {
-    nombre=nombre;
-    codigo=codigo;
+    this->nombre=nombre;
+    this->codigo=codigo;
     alumnos=alumnos;
-    cantidadalumnos=cantidadalumnos;
+    this->cantidadalumnos=cantidadalumnos;
 }
 
 Curso::~Curso()
