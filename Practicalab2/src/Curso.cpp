@@ -17,7 +17,7 @@ Curso::Curso(string nombre,string codigo,Estudiante *alumnos,int cantidadalumnos
 {
     this->nombre=nombre;
     this->codigo=codigo;
-    alumnos=alumnos;
+    alumnos=alumnos; //bucle para copiar alumnos uno a uno. 
     this->cantidadalumnos=cantidadalumnos;
 }
 
