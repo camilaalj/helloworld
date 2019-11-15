@@ -5,7 +5,7 @@ using namespace std;
 class Polygon
 {
     public:
-        Polygon();
+        Polygon(){};
         Polygon(int a, int b):width(a),height(b){}
         int area(void){return 0;}
         void printarea(){
@@ -75,6 +75,9 @@ class ArrayPolygon
             delete[] arr;
             arr=tmp;
         }
+        void usarRedimension(int size){
+            redimensionar(size);
+        }
     private:
         Polygon *arreglo;
         void redimensionar(int size){
@@ -98,8 +101,8 @@ int main()
     }
     ArrayPolygon defecto();
     ArrayPolygon paramet(arre,tam);
-    ArrayPolygon.insertarFinal(Poligon(3,5));
-    ArrayPolygon.insertar(Poligon(3,5),2);
-    ArrayPolygon.eliminar();
-    ArrayPolygon.redimensionar(6);
+    paramet.insertarFinal(Polygon(3,5));
+    paramet.insertar(Polygon(3,5),2);
+    paramet.eliminar();
+    paramet.usarRedimension(6);
 }
